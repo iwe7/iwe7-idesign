@@ -1,0 +1,9 @@
+<nz-layout>
+  <nz-content>
+    <nz-row nzGutter="24">
+      <nz-col nzSpan="8" (click)="setCurrentApp(app)" *ngFor="let app of list|async">
+        <nz-card [nzTitle]="app.title"></nz-card>
+      </nz-col>
+    </nz-row>
+  </nz-content>
+</nz-layout>

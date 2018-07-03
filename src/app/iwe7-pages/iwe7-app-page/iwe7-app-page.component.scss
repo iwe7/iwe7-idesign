@@ -1,0 +1,62 @@
+nz-layout {
+  height: 100%;
+}
+
+:host ::ng-deep .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+:host ::ng-deep .trigger:hover {
+  color: #1890ff;
+}
+
+:host ::ng-deep .logo {
+  height: 32px;
+  background: rgba(255, 255, 255, .2);
+  margin: 16px;
+}
+
+nz-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  .iwe7-app {
+    margin: 10px;
+    height: 736px;
+    max-height: 736px;
+    min-height: 736px;
+    width: 414px;
+    max-width: 414px;
+    min-width: 414px;
+    background: #fff;
+    position: relative;
+  }
+}
+
+.app-setting {
+  background: #efefef;
+  height: 100%;
+  padding: 20px 10px;
+  .app-setting-footer {
+    display: flex;
+    flex-direction: row;
+    button {
+      flex: 1;
+    }
+  }
+  .app-setting-empty {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: gray;
+    text-align: center;
+  }
+}

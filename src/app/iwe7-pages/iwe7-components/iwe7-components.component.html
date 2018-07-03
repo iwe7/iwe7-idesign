@@ -1,0 +1,6 @@
+<ul>
+  <li (click)="addToContent(item)" *ngFor="let item of list|async">
+    {{item.title}}
+  </li>
+  <li (click)="addComponents()">添加组件</li>
+</ul>

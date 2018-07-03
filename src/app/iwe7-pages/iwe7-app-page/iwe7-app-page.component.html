@@ -1,0 +1,38 @@
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+      <li nz-menu-item (click)="setCurrentPage(page)" *ngFor="let page of list|async">
+        <i class="anticon anticon-desktop"></i>
+        <span class="nav-text">{{page.title}}</span>
+      </li>
+      <li nz-menu-item (click)="createPage()">
+        <i class="anticon anticon-plus-circle"></i>
+        <span class="nav-text">添加页面</span>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header style="background: #fff; padding:0;">
+      <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="isCollapsed=!isCollapsed"></i>
+    </nz-header>
+    <nz-content>
+      <div class="iwe7-app">
+        <iwe7-app-content></iwe7-app-content>
+      </div>
+    </nz-content>
+    <nz-footer *ngIf="showSettingBtn">
+      <iwe7-components></iwe7-components>
+    </nz-footer>
+  </nz-layout>
+  <nz-sider nzWidth="400">
+    <div class="app-setting">
+      <div class="app-setting-content">
+        <iwe7-app-content-add></iwe7-app-content-add>
+      </div>
+    </div>
+  </nz-sider>
+</nz-layout>
+
+<ng-template #trigger>
+  <i class="anticon anticon-up"></i>
+</ng-template>
